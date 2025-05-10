@@ -1,17 +1,17 @@
 {
-    "name": "vscode-pets",
-    "displayName": "vscode-pets",
-    "description": "Pets for your VS Code",
-    "version": "1.31.0",
+    "name": "vscode-pets-anigirls",
+    "displayName": "vscode-pets-anigirls",
+    "description": "Modification to vscode-pets",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.73.0"
     },
     "l10n": "./l10n",
     "repository": {
         "type": "github",
-        "url": "https://github.com/tonybaloney/vscode-pets"
+        "url": "https://github.com/Lioueq/vscode-pets-anigirls"
     },
-    "homepage": "https://tonybaloney.github.io/vscode-pets",
+    "homepage": "https://github.com/Lioueq/vscode-pets",
     "bugs": "https://github.com/tonybaloney/vscode-pets/issues",
     "publisher": "tonybaloney",
     "categories": [
@@ -26,7 +26,8 @@
         "clippy",
         "rubber duck",
         "horse",
-        "deno"
+        "deno",
+        "hoshimi"
     ],
     "license": "MIT",
     "icon": "icon.png",
@@ -357,6 +358,7 @@
         "webpack-cli": "^4.10.0"
     },
     "dependencies": {
-        "@vscode/l10n": "^0.0.10"
+        "@vscode/l10n": "^0.0.10",
+        "@vscode/vsce": "^3.3.2"
     }
 }

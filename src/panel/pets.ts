@@ -20,7 +20,9 @@ import { Snake } from './pets/snake';
 import { Totoro } from './pets/totoro';
 import { Turtle } from './pets/turtle';
 import { Zappy } from './pets/zappy';
+import { Hoshimi } from './pets/hoshimi';
 import { IPetType } from './states';
+
 
 export class PetElement {
     el: HTMLImageElement;
@@ -186,6 +188,15 @@ export function createPet(
         throw new InvalidPetException('name is undefined');
     }
 
+    const hoshimiPetArguments: [
+        HTMLImageElement,
+        HTMLDivElement,
+        HTMLDivElement,
+        string,
+        number,
+        string,
+    ] = [el, collision, speech, petRoot, floor, name];
+
     const standardPetArguments: [
         HTMLImageElement,
         HTMLDivElement,
@@ -239,6 +250,8 @@ export function createPet(
             return new Turtle(...standardPetArguments, PetSpeed.verySlow);
         case PetType.horse:
             return new Horse(...standardPetArguments, PetSpeed.normal);
+        case PetType.hoshimi:
+            return new Hoshimi(...hoshimiPetArguments, PetSpeed.still);
         case PetType.panda:
             return new Panda(...standardPetArguments, PetSpeed.slow);
         default:
@@ -288,6 +301,8 @@ export function availableColors(petType: PetType): PetColor[] {
             return Turtle.possibleColors;
         case PetType.horse:
             return Horse.possibleColors;
+        case PetType.hoshimi:
+            return Hoshimi.possibleColors;
         case PetType.panda:
             return Panda.possibleColors;
         default:

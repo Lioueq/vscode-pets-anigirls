@@ -44,6 +44,7 @@ export const enum PetType {
     totoro = 'totoro',
     turtle = 'turtle',
     zappy = 'zappy',
+    hoshimi = 'hoshimi',
     null = 'null',
 }
 
@@ -61,6 +62,7 @@ export const enum PetSize {
     small = 'small',
     medium = 'medium',
     large = 'large',
+    giftheme = "giftheme",
 }
 
 export const enum ExtPosition {
@@ -115,6 +117,7 @@ export const ALL_PETS = [
     PetType.totoro,
     PetType.turtle,
     PetType.zappy,
+    PetType.hoshimi,
 ];
 export const ALL_COLORS = [
     PetColor.black,

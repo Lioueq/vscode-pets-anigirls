@@ -123,6 +123,8 @@ export abstract class BasePetType implements IPetType {
             return 55;
         } else if (size === PetSize.large) {
             return 110;
+        } else if (size == PetSize.giftheme) {
+            return 310;
         } else {
             return 30; // Shrug
         }
