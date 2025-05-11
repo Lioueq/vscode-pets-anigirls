@@ -21,6 +21,7 @@ import { Totoro } from './pets/totoro';
 import { Turtle } from './pets/turtle';
 import { Zappy } from './pets/zappy';
 import { Hoshimi } from './pets/hoshimi';
+import { Kitagawa } from './pets/kitagawa';
 import { IPetType } from './states';
 
 
@@ -188,7 +189,7 @@ export function createPet(
         throw new InvalidPetException('name is undefined');
     }
 
-    const hoshimiPetArguments: [
+    const anigirlArguments: [
         HTMLImageElement,
         HTMLDivElement,
         HTMLDivElement,
@@ -251,7 +252,9 @@ export function createPet(
         case PetType.horse:
             return new Horse(...standardPetArguments, PetSpeed.normal);
         case PetType.hoshimi:
-            return new Hoshimi(...hoshimiPetArguments, PetSpeed.still);
+            return new Hoshimi(...anigirlArguments, PetSpeed.still);
+        case PetType.kitagawa:
+            return new Kitagawa(...anigirlArguments, PetSpeed.still);
         case PetType.panda:
             return new Panda(...standardPetArguments, PetSpeed.slow);
         default:
@@ -303,6 +306,8 @@ export function availableColors(petType: PetType): PetColor[] {
             return Horse.possibleColors;
         case PetType.hoshimi:
             return Hoshimi.possibleColors;
+        case PetType.kitagawa:
+            return Kitagawa.possibleColors;
         case PetType.panda:
             return Panda.possibleColors;
         default:
